@@ -5,6 +5,8 @@ export IS_DRY_RUN=true
 export KAFKA_BROKER=kafka-service:9092
 export KAFKA_TOPIC=aircraft-states
 
+export HTTP_PATH=https://opensky-network.org/api/states/all
+
 export LATITUDE_MIN=42.5
 export LATITUDE_MAX=45
 export LONGITUDE_MIN=-1.5

@@ -23,6 +23,8 @@ public class OpenSkyKafkaPublisher {
     private static final String KAFKA_TOPIC = System.getenv("KAFKA_TOPIC");
     private static final String IS_DRY_RUN = System.getenv("IS_DRY_RUN");
 
+    private static final String HTTP_PATH = "https://opensky-network.org/api/states/all";
+
     private static final String LATITUDE_MIN = System.getenv("LATITUDE_MIN");
     private static final String LATITUDE_MAX = System.getenv("LATITUDE_MAX");
     private static final String LONGITUDE_MIN = System.getenv("LONGITUDE_MIN");
@@ -109,8 +111,8 @@ public class OpenSkyKafkaPublisher {
         System.out.println("\tLONGITUDE_MAX: " + lomax);
 
         String url = String.format(
-            "https://opensky-network.org/api/states/all?lamin=%.1f&lomin=%.1f&lamax=%.1f&lomax=%.1f", 
-            lamin, lomin, lamax, lomax
+            "%s?lamin=%.1f&lomin=%.1f&lamax=%.1f&lomax=%.1f", 
+            HTTP_PATH, lamin, lomin, lamax, lomax
         );
 
         HttpRequest request = HttpRequest.newBuilder()
