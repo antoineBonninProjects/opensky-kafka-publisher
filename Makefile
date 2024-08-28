@@ -11,7 +11,6 @@ run:
 
 upload:
 	@$(MAKE) build;
-	@/bin/bash -c 'set -a; source .envrc; set +a; echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin';
 	@docker build -t abonnin33/opensky-kafka-publisher:latest .;
-	@sleep 1;
+	@/bin/bash -c 'set -a; source .envrc; set +a; echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin';
 	@docker push abonnin33/opensky-kafka-publisher:latest;
