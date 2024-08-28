@@ -19,15 +19,15 @@ source .envrc
 
 ## Run from prebuilt image
 
-Pull the abonnin33/opensky-puller image
+Pull the abonnin33/opensky-kafka-publisher image
 ```sh
-docker pull abonnin33/opensky-puller:latest
+docker pull abonnin33/opensky-kafka-publisher:latest
 ```
 
 Then run the code
 
 ```sh
-docker run abonnin33/opensky-puller:latest
+docker run abonnin33/opensky-kafka-publisher:latest
 ```
 
 ## Run you own image
@@ -35,15 +35,15 @@ docker run abonnin33/opensky-puller:latest
 You can fork this project and create your own image
 
 ```sh
-mvn clean package;                                      # Build the .jar fatjar with dependencies
-docker build -t <your-username>/opensky-puller:latest;  # Build the docker image
+mvn clean package;                                               # Build the .jar fatjar with dependencies
+docker build -t <your-username>/opensky-kafka-publisher:latest;  # Build the docker image
 docker login;
-docker push <your-username>/opensky-puller:latest;      # Push the image: optionnal
+docker push <your-username>/opensky-kafka-publisher:latest;      # Push the image: optionnal
 ```
 
 Then  run it
 
 ```sh
-docker run <your-username>/opensky-puller:latest
+docker run <your-username>/opensky-kafka-publisher:latest
 
 ```

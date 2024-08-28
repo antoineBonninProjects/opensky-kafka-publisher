@@ -2,11 +2,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.opensky_puller</groupId>
-  <artifactId>opensky_puller</artifactId>
+  <groupId>com.opensky.kafka.publisher</groupId>
+  <artifactId>opensky-kafka-publisher</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
-  <name>opensky_puller</name>
+  <name>opensky-kafka-publisher</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -47,7 +47,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.opensky_puller.OpenSkyQuery</mainClass>
+              <mainClass>com.opensky.kafka.publisher.OpenSkyKafkaPublisher</mainClass>
             </manifest>
           </archive>
         </configuration>

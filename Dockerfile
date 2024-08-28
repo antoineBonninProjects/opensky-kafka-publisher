@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the jar file into the container (replace with your actual jar file name)
-COPY target/opensky_puller-1.0.jar /app/opensky_puller.jar
+COPY target/opensky_kafka_publisher-1.0.jar /app/opensky_kafka_publisher.jar
 
 # Set the entrypoint to run the Java application
-ENTRYPOINT ["java", "-jar", "/app/opensky_puller.jar"]
+ENTRYPOINT ["java", "-jar", "/app/opensky_kafka_publisher.jar"]

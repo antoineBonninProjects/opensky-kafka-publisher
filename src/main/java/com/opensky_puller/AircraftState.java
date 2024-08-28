@@ -1,4 +1,4 @@
-package com.opensky_puller;
+package com.opensky.kafka.publisher;
 
 import org.json.JSONArray;
 

@@ -1,4 +1,4 @@
-package com.opensky_puller;
+package com.opensky.kafka.publisher;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -17,7 +17,7 @@ import java.net.http.HttpResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class OpenSkyQuery {
+public class OpenSkyKafkaPublisher {
 
     private static final String KAFKA_BROKER = System.getenv("KAFKA_BROKER");
     private static final String KAFKA_TOPIC = System.getenv("KAFKA_TOPIC");
